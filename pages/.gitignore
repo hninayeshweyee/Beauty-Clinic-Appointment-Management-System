@@ -1,0 +1,12 @@
+/vendor
+/node_modules
+/.env
+
+# Build tools နှင့် settings များ
+gulpfile.js
+
+# Node နဲ့ Composer ရဲ့ configuration file တွေကို Git ပေါ်တင်ချင်ရင် (ဒါက အကြံပြုချက်ပါ)
+# package.json နဲ့ composer.json ကိုတော့ GitHub ပေါ် တင်ပေးရပါမယ်။
+# ဒါကြောင့် စက်ထဲက lock ကျနေတဲ့ file တွေကိုပဲ ignore လုပ်ဖို့ အောက်ပါအတိုင်း ပြောင်းရေးပါ-
+package-lock.json
+composer.lock
