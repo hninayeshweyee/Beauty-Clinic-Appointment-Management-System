@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("connect.php");
-
+/** @var mysqli $connect */ //
 // Redirect to login if session is not set
 if (!isset($_SESSION['clientID'])) {
     header("Location: login.php");

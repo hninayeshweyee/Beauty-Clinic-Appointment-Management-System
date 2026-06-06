@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+include("connect.php");
+/** @var mysqli $connect */ //
 // 1. Check if user is logged in
 if (!isset($_SESSION['clientID'])) {
     if (isset($_GET['treatment'])) {
@@ -18,7 +19,7 @@ if (!isset($_SESSION['clientID'])) {
     exit();
 }
 
-include("connect.php");
+
 
 // --- START: AUTOMATIC PROMOTION DETECTION LOGIC ---
 $preselected_id = isset($_GET['treatment']) ? (int)$_GET['treatment'] : 0;
@@ -27,7 +28,7 @@ $today = date('Y-m-d');
 $discountRate = 0;
 $eligible_services = []; 
 
-// အကယ်၍ URL မှာ pid မပါလာရင်တောင် Preselected Treatment အတွက် Active Promotion ရှိမရှိ စစ်ဆေးသည်
+// Active Promotion ရှိမရှိ စစ်ဆေးသည်
 if ($promoID == 0 && $preselected_id > 0) {
     $auto_promo_sql = "SELECT p.promotionID, p.discountRate 
                        FROM Promotion p
@@ -41,7 +42,7 @@ if ($promoID == 0 && $preselected_id > 0) {
     }
 }
 
-// Promotion ID သိရပြီဆိုလျှင် Eligible Services များကို list လုပ်သည်
+
 if ($promoID > 0) {
     $promo_res = mysqli_query($connect, "SELECT * FROM Promotion WHERE promotionID = '$promoID'");
     if ($p_row = mysqli_fetch_array($promo_res)) {
@@ -223,10 +224,10 @@ $dr_res = mysqli_query($connect, "SELECT * FROM Doctor ORDER BY doctorName ASC")
                     $discounted_price = $original_price - ($original_price * $discountRate / 100);
                 ?>
                     <span class="text-muted small text-decoration-line-through d-block" style="font-size: 0.8rem;">
-                        $<?= number_format($original_price, 2); ?>
+                        MMK<?= number_format($original_price, 2); ?>
                     </span>
                     <span class="fw-bold text-danger">
-                        $<?= number_format($discounted_price, 2); ?>
+                        MMK<?= number_format($discounted_price, 2); ?>
                     </span>
                 <?php else: ?>
                     <span class="fw-bold">$<?= number_format($original_price, 2); ?></span>

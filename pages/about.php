@@ -2,7 +2,7 @@
 
 session_start();
 include("connect.php");
-
+/** @var mysqli $connect */ //
         
 
 ?>

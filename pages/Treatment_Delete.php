@@ -1,5 +1,6 @@
 <?php
 include ("connect.php");
+/** @var mysqli $connect */ //
 session_start();
 
 if (isset($_GET['treatmentID'])) {

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("connect.php");
+/** @var mysqli $connect */ //
 
 // 1. Security Check
 if(!isset($_SESSION['staffID'])) {

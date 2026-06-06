@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('connect.php');
+/** @var mysqli $connect */ //
 
 // 1. Check if client is logged in
 if (!isset($_SESSION['clientID'])) {

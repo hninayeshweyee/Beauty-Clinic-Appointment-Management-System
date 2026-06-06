@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("connect.php");
+/** @var mysqli $connect */ //
 
 // --- PHP Processing Logic Start ---
 if(isset($_POST['btnSend'])) {

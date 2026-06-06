@@ -1,6 +1,9 @@
 <?php
 include ("connect.php");
+/** @var mysqli $connect */ //
+
 session_start();
+
 
 if (isset($_GET['supplierID'])) {
     // URL ကနေလာတဲ့ ID ကို လက်ခံပြီး SQL Injection ကာကွယ်ရန် escape လုပ်ပါ

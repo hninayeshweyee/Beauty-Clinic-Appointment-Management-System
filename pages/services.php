@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("connect.php");
+/** @var mysqli $connect */ //
 
 // 1. Category ID ကို ယူခြင်း
 if (isset($_GET['id'])) {

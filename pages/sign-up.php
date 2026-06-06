@@ -1,6 +1,7 @@
 <?php  
 session_start();
 include('connect.php');
+/** @var mysqli $connect */ //
 
 // Security Check - Only logged-in staff can register others
 if(!isset($_SESSION['staffID'])) {

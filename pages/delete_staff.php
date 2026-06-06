@@ -1,7 +1,7 @@
 <?php
 include ("connect.php");
 session_start();
-
+/** @var mysqli $connect */ //
 
 if (!isset($_SESSION['staffID'])) {
     echo "<script>alert('Please login first!');</script>";

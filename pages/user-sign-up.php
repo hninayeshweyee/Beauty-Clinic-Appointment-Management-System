@@ -1,5 +1,6 @@
 <?php  
 include('connect.php');
+/** @var mysqli $connect */ //
 
 if(isset($_POST['btnSave'])) 
 {

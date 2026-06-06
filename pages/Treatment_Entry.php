@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include('connect.php');
+/** @var mysqli $connect */ //
 
 if(!isset($_SESSION['staffID'])) {
     echo "<script>window.alert('Please Login.')</script>";

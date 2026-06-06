@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("connect.php");
+/** @var mysqli $connect */ //
 
 if (isset($_GET['id'])) {
     $tID = mysqli_real_escape_string($connect, $_GET['id']);

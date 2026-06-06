@@ -1,6 +1,8 @@
 <?php
 session_start();
 include('connect.php');
+/** @var mysqli $connect */ //
+
 if(!isset($_SESSION['clientID'])) {
     echo "<script>alert('Please login first!'); window.location='login.php'</script>";
     exit();

@@ -1,6 +1,6 @@
 <?php
 include('connect.php');
-
+/** @var mysqli $connect */ //
 
 $filename = "GlowWave_Report_" . date('Y-m-d') . ".csv";
 

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("connect.php");
+/** @var mysqli $connect */ //
 
 if (isset($_POST['btnLogin'])) {
     $Email = $_POST['txtEmail'];

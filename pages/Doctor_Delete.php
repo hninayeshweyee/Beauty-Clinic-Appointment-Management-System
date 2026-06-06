@@ -1,6 +1,7 @@
 <?php
 include ("connect.php");
 session_start();
+/** @var mysqli $connect */ //
 
 if (isset($_GET['doctorID'])) {
     $doctorID = mysqli_real_escape_string($connect, $_GET['doctorID']);

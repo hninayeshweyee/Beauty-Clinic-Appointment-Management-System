@@ -1,5 +1,6 @@
 <?php
 include('connect.php');
+/** @var mysqli $connect */ //
 
 if(isset($_POST['doctorID'])) {
     $doctorID = mysqli_real_escape_string($connect, $_POST['doctorID']);

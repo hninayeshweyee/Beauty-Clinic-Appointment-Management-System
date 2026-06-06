@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("connect.php");
+/** @var mysqli $connect */ //
 
 $today = date('Y-m-d');
 
@@ -160,8 +161,8 @@ while($row = mysqli_fetch_assoc($res)) {
                                     </div>
                                     <h5 class="fw-bold mb-2"><?= htmlspecialchars($item['treatmentName']) ?></h5>
                                     <div class="d-flex align-items-baseline mb-3">
-                                        <span class="old-price">$<?= number_format($original) ?></span>
-                                        <span class="new-price">$<?= number_format($final) ?></span>
+                                        <span class="old-price">MMK<?= number_format($original) ?></span>
+                                        <span class="new-price">MMK<?= number_format($final) ?></span>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <span class="duration-tag"><i class="far fa-hourglass-half me-1"></i> <?= $item['duration'] ?> Min</span>

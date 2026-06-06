@@ -2,6 +2,7 @@
 // 1. Session must be the very first thing
 session_start();
 include("connect.php");
+/** @var mysqli $connect */ //
 
 // Initialize counter if it doesn't exist
 if (!isset($_SESSION['LoginError'])) {
